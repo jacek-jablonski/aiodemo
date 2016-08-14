@@ -1,5 +1,10 @@
 # aiothttp REST API demo
+A sample python rest api using aiohttp and some other choice libraries to optimize for speed without adding a too much additional complexity.
 
+Notable compromises:
+- [schematics](https://github.com/schematics/schematics) provides serialization but no ORM
+- [asyncpg](https://github.com/MagicStack/asyncpg) provides fast, binary, async access to Postgres, but is young and the documentation provides only the basics.
+- [ujson](https://github.com/esnme/ultrajson) is very fast but, does not allow for customizing the serialization of unknown types, it just serializes an "unserializable" object to a dict containing each of its properties.
 
 ## Getting Started
 
